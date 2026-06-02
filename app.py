@@ -462,3 +462,16 @@ if "analysis_results" in st.session_state:
     st.markdown("---")
     st.markdown("### 📤 Export Tailored Content")
     st.write("You can copy the tailored bullet points and sections directly from the tabs above to update your word document or LaTex file.")
+
+# Footer Section - Created with love by Tanishk Jaiswal
+st.markdown("""
+<hr style="border: 0; height: 1px; background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0)); margin-top: 3rem; margin-bottom: 1.5rem;">
+<div style="text-align: center; color: #8892b0; font-size: 0.9rem; padding-bottom: 2rem;">
+    <p>Created with ❤️ by <span style="color: #2ecc71; font-weight: 600;">Tanishk Jaiswal</span></p>
+    <div style="margin-top: 10px;">
+        <a href="https://github.com/tanishk13-devops" target="_blank" style="color: #a5b4fc; text-decoration: none; margin: 0 10px; font-weight: 500;">🐱 GitHub</a> | 
+        <a href="https://www.linkedin.com/in/tanishk-jaiswal/" target="_blank" style="color: #a5b4fc; text-decoration: none; margin: 0 10px; font-weight: 500;">💼 LinkedIn</a> | 
+        <a href="mailto:nickyjaiswal85@gmail.com" style="color: #a5b4fc; text-decoration: none; margin: 0 10px; font-weight: 500;">📧 Email</a>
+    </div>
+</div>
+""", unsafe_allow_html=True)
