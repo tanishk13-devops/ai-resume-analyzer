@@ -470,7 +470,7 @@ st.markdown("""
     <p>Created with ❤️ by <span style="color: #2ecc71; font-weight: 600;">Tanishk Jaiswal</span></p>
     <div style="margin-top: 10px;">
         <a href="https://github.com/tanishk13-devops" target="_blank" style="color: #a5b4fc; text-decoration: none; margin: 0 10px; font-weight: 500;">🐱 GitHub</a> | 
-        <a href="https://www.linkedin.com/in/tanishk-jaiswal/" target="_blank" style="color: #a5b4fc; text-decoration: none; margin: 0 10px; font-weight: 500;">💼 LinkedIn</a> | 
+        <a href="https://www.linkedin.com/in/tanishk-jaiswal-05a24724a/" target="_blank" style="color: #a5b4fc; text-decoration: none; margin: 0 10px; font-weight: 500;">💼 LinkedIn</a> | 
         <a href="mailto:nickyjaiswal85@gmail.com" style="color: #a5b4fc; text-decoration: none; margin: 0 10px; font-weight: 500;">📧 Email</a>
     </div>
 </div>
