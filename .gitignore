@@ -1,0 +1,21 @@
+# Virtual environments
+venv/
+venv312/
+.venv/
+env/
+ENV/
+
+# Secret credentials (contains OpenAI/Gemini API keys)
+.env
+
+# Python compilation files
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyd
+
+# Task logs and caching directories
+.system_generated/
+*.log
+.pytest_cache/
+.ipynb_checkpoints/
