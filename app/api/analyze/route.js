@@ -1,3 +1,4 @@
+import './polyfill.js';
 import { NextResponse } from 'next/server';
 import { PDFParse } from 'pdf-parse';
 import mammoth from 'mammoth';
