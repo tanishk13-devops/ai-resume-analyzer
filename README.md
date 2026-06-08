@@ -2,7 +2,7 @@
 
 An AI-powered Resume Analyzer and Enhancer built using Streamlit, Python, and the Google Gemini API (with support for OpenAI). This tool extracts text from resumes (PDF, DOCX, TXT), maps it against job descriptions, and provides structured feedback to improve formatting, keyword density, and overall ATS matching scores.
 
-🚀 **Live App URL:** [https://tanishk13-devops-ai-resume-analyzer.streamlit.app/](https://tanishk13-devops-ai-resume-analyzer.streamlit.app/)
+🚀 **Live App URL:** [https://ai-resume-analyzer-xi-jet.vercel.app](https://ai-resume-analyzer-xi-jet.vercel.app)
 
 ---
 
