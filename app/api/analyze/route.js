@@ -142,8 +142,11 @@ export async function POST(request) {
     let parsedJson = null;
 
     if (provider === 'Google Gemini') {
-      const apiKeyToUse = clientApiKey || process.env.GEMINI_API_KEY || process.env.OPENAI_API_KEY;
-      if (!apiKeyToUse) {
+      let apiKeyToUse = clientApiKey;
+      if (!apiKeyToUse || apiKeyToUse.trim() === '' || apiKeyToUse === 'null' || apiKeyToUse === 'undefined' || apiKeyToUse === 'DEMO') {
+        apiKeyToUse = process.env.GEMINI_API_KEY;
+      }
+      if (!apiKeyToUse || apiKeyToUse.trim() === '') {
         return NextResponse.json({ error: 'Gemini API key is not configured.' }, { status: 401 });
       }
 

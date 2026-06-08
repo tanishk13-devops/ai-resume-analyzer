@@ -102,8 +102,8 @@ export default function Home() {
       setError('Please paste the target job description to compare against.');
       return;
     }
-    if (!demoMode && !apiKey.trim()) {
-      setError(`Please configure your ${provider} API Key in the sidebar settings.`);
+    if (!demoMode && !apiKey.trim() && provider !== 'Google Gemini') {
+      setError(`Please configure your ${provider} API Key in the sidebar settings (or select Google Gemini to use the pre-configured shared key).`);
       return;
     }
 
@@ -204,11 +204,11 @@ export default function Home() {
             {!demoMode && (
               <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
                 <label style={{ fontSize: '0.85rem', fontWeight: '600', color: 'var(--text-secondary)' }}>
-                  {isGemini ? 'Enter Gemini API Key:' : 'Enter OpenAI API Key:'}
+                  {isGemini ? 'Gemini API Key (using pre-configured shared key):' : 'Enter OpenAI API Key:'}
                 </label>
                 <input
                   type="password"
-                  placeholder={isGemini ? 'AIzaSy...' : 'sk-proj-...'}
+                  placeholder={isGemini ? 'Using pre-configured shared key...' : 'sk-proj-...'}
                   value={apiKey}
                   onChange={(e) => setApiKey(e.target.value)}
                   style={{
