@@ -1,4 +1,5 @@
 import './polyfill.js';
+import 'pdfjs-dist/legacy/build/pdf.worker.mjs';
 import { NextResponse } from 'next/server';
 import { PDFParse } from 'pdf-parse';
 import mammoth from 'mammoth';
