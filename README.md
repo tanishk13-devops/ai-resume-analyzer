@@ -1,69 +1,152 @@
-# 🤖 AI Resume Analyzer & Enhancer
+# AI Resume Analyzer
 
-An AI-powered Resume Analyzer and Enhancer built using Streamlit, Python, and the Google Gemini API (with support for OpenAI). This tool extracts text from resumes (PDF, DOCX, TXT), maps it against job descriptions, and provides structured feedback to improve formatting, keyword density, and overall ATS matching scores.
+Your AI-powered resume analyzer using OpenAI GPT and Streamlit.
 
-🚀 **Live App URL:** [https://ai-resume-analyzer-xi-jet.vercel.app](https://ai-resume-analyzer-xi-jet.vercel.app)
+## 🚀 Quick Start
+
+### 1. Prerequisites
+- Python 3.8+
+- OpenAI API key
+
+### 2. Installation
+
+```bash
+# Clone or navigate to project
+cd ai-resume-analyzer
+
+# Create virtual environment
+python -m venv venv
+
+# Activate virtual environment
+# Windows:
+venv\Scripts\activate
+# macOS/Linux:
+source venv/bin/activate
+
+# Install dependencies
+pip install -r requirements.txt
+```
+
+### 3. Configuration
+
+```bash
+# Copy .env.example to .env
+cp .env.example .env
+
+# Edit .env and add your OpenAI API key
+# OPENAI_API_KEY=sk-...
+```
+
+### 4. Run Application
+
+```bash
+streamlit run main.py
+```
+
+The app will open at `http://localhost:8501`
+
+## 📁 Project Structure
+
+```
+ai-resume-analyzer/
+├── main.py                 # Streamlit app entry point
+├── requirements.txt        # Python dependencies
+├── .env.example           # Environment variables template
+├── README.md              # This file
+├── utils/
+│   ├── file_handler.py    # PDF/DOCX text extraction
+│   ├── text_processor.py  # Text processing & skill extraction
+│   └── llm_handler.py     # OpenAI API integration
+├── modules/
+│   └── resume_analyzer.py # Main analysis orchestrator
+└── data/
+    └── (for storing analyses)
+```
+
+## ✨ Features
+
+- **Resume Upload**: Support for PDF and DOCX formats
+- **Job Description Input**: Text paste or file upload
+- **AI Analysis**: Match score, skill analysis, suggestions
+- **Improved Resume**: AI-generated optimized resume
+- **Export Results**: Download analysis and improved resume
+
+## 🔧 Tech Stack
+
+- **Frontend**: Streamlit
+- **LLM**: OpenAI GPT-3.5-turbo
+- **Document Processing**: PyPDF2, python-docx
+- **Data Processing**: Pandas
+- **Database**: SQLAlchemy (optional)
+
+## 📊 How It Works
+
+1. Upload resume and job description
+2. Extract text from files
+3. Analyze using OpenAI GPT
+4. Generate match scores and suggestions
+5. Create AI-optimized resume
+6. Display and download results
+
+## 🎯 Analysis Results
+
+- **Match Score**: Overall resume-to-job alignment (0-100%)
+- **Matching Skills**: Skills present in both resume and job
+- **Missing Skills**: Required skills not in resume
+- **Suggestions**: Specific improvements for resume
+- **Improved Resume**: AI-rewritten resume optimized for job
+
+## 🔐 Security
+
+- API keys stored in `.env` (never commit to git)
+- File uploads processed locally
+- No data stored without user consent
+
+## 📝 Requirements
+
+- OpenAI API key with credits
+- Minimum 10 MB file upload support
+- Modern web browser
+- Python 3.8+
+
+## 🐛 Troubleshooting
+
+**Issue**: "Invalid API key"
+- Check `.env` file has correct OPENAI_API_KEY
+- Verify API key has available credits
+
+**Issue**: "File upload failed"
+- Check file size is less than 10 MB
+- Verify file is PDF or DOCX format
+
+**Issue**: Module import errors
+- Run `pip install -r requirements.txt`
+- Verify virtual environment is activated
+
+## 📚 Development
+
+### Phase 1: Foundation ✅
+- Project structure created
+- All base files set up
+- Dependencies configured
+
+### Phase 2-10: Coming Next
+- Document processing enhancement
+- Database integration
+- Advanced features
+- Deployment
+
+## 📄 License
+
+MIT
+
+## 👨‍💻 Author
+
+Created as part of AI Resume Analyzer project
 
 ---
 
-## 🌟 Key Features
-
-- **📊 Match Dashboard**: Displays an interactive Plotly-based ATS match score gauge, candidate strengths, and a professional fit summary.
-- **🔍 Keyword Gap Analysis**: Visualizes matching and missing skills or keywords using clean, side-by-side color-coded pill chips.
-- **💡 Resume Enhancer**: Generates action-oriented, metrics-driven bullet point recommendations using the CAR/STAR method, with strategic rationale.
-- **💬 Interview Prep Q&A**: Dynamically creates custom interview questions, answer strategies, and sample answers based on the resume gaps.
-- **🛠️ Multi-Provider Support**: Supports both **Google Gemini** (pre-configured for `gemini-2.5-flash`) and **OpenAI** models. Includes a offline **Demo Mode** for local testing without API credits.
-
----
-
-## 🛠️ Local Installation & Setup
-
-1. **Clone the Repository**:
-   ```bash
-   git clone https://github.com/tanishk13-devops/ai-resume-analyzer.git
-   cd ai-resume-analyzer
-   ```
-
-2. **Configure Environment Variables**:
-   Create a `.env` file in the root directory:
-   ```env
-   # Google Gemini API Key
-   GEMINI_API_KEY=your_gemini_api_key_here
-
-   # OpenAI API Key (Optional)
-   OPENAI_API_KEY=your_openai_api_key_here
-   ```
-
-3. **Install Dependencies and Run**:
-   It is recommended to run the app using `uv` or a virtual environment (Python 3.12 is recommended):
-   ```bash
-   pip install -r requirements.txt
-   streamlit run app.py
-   ```
-
----
-
-## 🐋 Docker Support
-
-You can also run this application containerized using Docker:
-
-1. **Build the image**:
-   ```bash
-   docker build -t ai-resume-analyzer .
-   ```
-
-2. **Run the container**:
-   ```bash
-   docker run -p 8501:8501 ai-resume-analyzer
-   ```
-   Open `http://localhost:8501` to access the application.
-
----
-
-## 🤝 Contributing
-Feel free to open issues or pull requests to suggest new features or improvements.
-
----
-
-### Created with ❤️ by [Tanishk Jaiswal](https://www.linkedin.com/in/tanishk-jaiswal-05a24724a/)
-🐱 [GitHub](https://github.com/tanishk13-devops) | 💼 [LinkedIn](https://www.linkedin.com/in/tanishk-jaiswal-05a24724a/) | 📧 [Email](mailto:nickyjaiswal85@gmail.com)
+**Next Steps**: 
+1. Install dependencies: `pip install -r requirements.txt`
+2. Add OpenAI API key to `.env`
+3. Run: `streamlit run main.py`
